@@ -1,0 +1,51 @@
+body {
+  padding: 50px;
+  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00b7ff;
+}
+ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+ul li {
+  list-style: none;
+  background: #000;
+}
+ul li a {
+  text-decoration: none;
+  padding: 5px;
+  display: inline-block;
+}
+.langBtn a {
+  background: blue;
+  color: white;
+  display: inline-block;
+  border: 1px solid #000;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+.links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.links a {
+  text-decoration: none;
+  font-size: 20px;
+  padding: 5px;
+}
+.links a:nth-child(1) {
+  background: red;
+}
+.links a:nth-child(2) {
+  background: blue;
+}
+.links a:nth-child(3) {
+  background: green;
+}
