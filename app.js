@@ -16,7 +16,6 @@ app.use(
     secret: process.env.SECRET_KEY,
     resave: false,
     saveUninitialized: true,
-    // cookie: { secure: true },
   })
 );
 app.set('views', path.join(__dirname, 'views'));
