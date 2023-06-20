@@ -1,6 +1,12 @@
 const User = require("../model/User");
 const bcrypt = require("bcrypt");
+const { validationResult } = require("express-validator");
 exports.register_post = async (req, res) => {
+  const errors = validationResult(req);
+  const hasError = !errors.isEmpty();
+  if (hasError) {
+    return res.render("register", { title: "Register", errors: errors.errors  });
+  }
   try {
     const { email, password, name } = req.body;
     const checkEmail = await User.findOne({ email });

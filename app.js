@@ -1,5 +1,6 @@
 const createError = require("http-errors");
 const express = require("express");
+const app = express();
 require("dotenv").config();
 require("./config/db").connectDB();
 const path = require("path");
@@ -10,7 +11,6 @@ const session = require("express-session");
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 const ProductRouter = require("./routes/product");
-const app = express();
 app.use(
   session({
     secret: process.env.SECRET_KEY,
