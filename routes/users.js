@@ -10,7 +10,9 @@ router.get("/register", (req, res, next) => {
 });
 router.post(
   "/register",
-  [check("email").isEmail().withMessage("Noto'g'ri Email")],
+  [
+    check("name"),
+    check("email").isEmail().withMessage("Noto'g'ri Email")],
   register_post
 );
 module.exports = router;
