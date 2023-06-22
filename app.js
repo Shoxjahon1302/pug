@@ -18,6 +18,12 @@ app.use(
     saveUninitialized: true,
   })
 );
+// Password
+const passport = require("passport");
+require("./config/passport")(passport);
+app.use(passport.initialize());
+app.use(passport.session());
+// view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 app.use(logger("dev"));
