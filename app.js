@@ -8,6 +8,7 @@ const fs = require("fs");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const session = require("express-session");
+// const flash = require("connect-flash");
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 const ProductRouter = require("./routes/product");
@@ -18,6 +19,8 @@ app.use(
     saveUninitialized: true,
   })
 );
+// flash xatolik chiqarib berish
+app.use(require("connect-flash")());
 // Password
 const passport = require("passport");
 require("./config/passport")(passport);
