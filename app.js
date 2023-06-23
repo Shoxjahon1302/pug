@@ -21,6 +21,10 @@ app.use(
 );
 // flash xatolik chiqarib berish
 app.use(require("connect-flash")());
+app.use((req, res, next) => {
+  res.locals.messages = require("express-messages")(req, res);
+  next();
+});
 // Password
 const passport = require("passport");
 require("./config/passport")(passport);
