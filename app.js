@@ -12,6 +12,7 @@ const session = require("express-session");
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 const ProductRouter = require("./routes/product");
+const adminRouter = require("./routes/admin");
 app.use(
   session({
     secret: process.env.SECRET_KEY,
@@ -27,6 +28,7 @@ app.use((req, res, next) => {
 });
 // Password
 const passport = require("passport");
+const { admin } = require("./controllers/product");
 require("./config/passport")(passport);
 app.use(passport.initialize());
 app.use(passport.session());
@@ -50,6 +52,7 @@ app.use((req, res, next) => {
     }
   });
 });
+app.use("/admin", adminRouter);
 app.use("/", indexRouter);
 app.use("/", usersRouter);
 app.use("/product", ProductRouter);
