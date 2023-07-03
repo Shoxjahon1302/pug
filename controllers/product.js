@@ -43,6 +43,3 @@ exports.add_delete = async (req, res, next) => {
     console.log(error);
   }
 };
-exports.admin = (req, res) => {
-  res.render("admin/index", { title: "Dashboard" });
-};
