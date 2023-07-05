@@ -1,40 +1,39 @@
 extends ../../layout 
 
 block content 
-    section.dashboard
-        .dash-content
-            .overview
-                .title
-                    i.fa-solid.fa-gauge-simple-high
-                    span.text Dashboard
-                .boxes
-                    .box.box1
-                        i.fa-regular.fa-thumbs-up(onclick='changeColor(this)')
-                        span.text
-                            | Umumiy Layklarimiz 
-                            br
-                            |                 Ko&apos;repsanmi cheksiz qivardek
-                        span.number
-                            i.fa-solid.fa-infinity
-                    .box.box2
-                        i.fa-regular.fa-comments
-                        span.text
-                            | Umumiy Comentariyalarimiz 
-                            br
-                            |                 Bu ham wunde uka
-                        span.number
-                            i.fa-solid.fa-infinity
-                    .box.box3
-                        i.fa-solid.fa-share-from-square
-                        span.text
-                            | Umumiy Ulashilganlar 
-                            br
-                            |                 G&apos;ilay ko&apos;zeni ochib ko&apos;r
-                        span.number
-                            i.fa-solid.fa-infinity
-            .activity
-                .title
-                    i.fa-solid.fa-clock
-                    span.text Recent Activity
-                input.input(type='text' placeholder='Search users....')
-                table#myList
+    .dash-content
+        .overview
+            .title
+                i.fa-solid.fa-gauge-simple-high
+                span.text Dashboard
+            .boxes
+                .box.box1
+                    i.fa-regular.fa-thumbs-up(onclick='changeColor(this)')
+                    span.text
+                        | Umumiy Layklarimiz 
+                        br
+                        |                 Ko&apos;repsanmi cheksiz qivardek
+                    span.number
+                        i.fa-solid.fa-infinity
+                .box.box2
+                    i.fa-regular.fa-comments
+                    span.text
+                        | Umumiy Comentariyalarimiz 
+                        br
+                        |                 Bu ham wunde uka
+                    span.number
+                        i.fa-solid.fa-infinity
+                .box.box3
+                    i.fa-solid.fa-share-from-square
+                    span.text
+                        | Umumiy Ulashilganlar 
+                        br
+                        |                 G&apos;ilay ko&apos;zeni ochib ko&apos;r
+                    span.number
+                        i.fa-solid.fa-infinity
+        .activity
+            .title
+                i.fa-solid.fa-clock
+                span.text Recent Activity
+            input.input(type='text' placeholder='Search users....')
+            table#myList

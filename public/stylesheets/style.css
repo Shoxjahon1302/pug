@@ -1,6 +1,6 @@
 body {
   padding: 50px;
-  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -48,4 +48,8 @@ form {
 }
 .links a:nth-child(3) {
   background: green;
+}
+.product {
+  color: red;
+  font-size: 30px;
 }

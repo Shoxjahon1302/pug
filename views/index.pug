@@ -1,13 +1,17 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-
-  h2 Mahsulotlar
+  p.product Welcome to #{title}
+    div.links
+      a(href=`/product/add`) Add 
+      a(href=`/admin`) AdminPanel  
+  h2 Mahsulotlar 
   each car ,i in cars       
     h1 #{car.name}
+    h1 #{car.image}
+    h1 #{car.price}
+    h1 #{car.description}
     div.links 
-     a(href=`/product/add`) Add 
-     a(href=`/product/${car.id}`) Edit
-     a(href=`/product/delete/${car.id}`) Delete
+      a(href=`/product/add`) Add 
+      a(href=`/product/${car.id}`) Edit
+      a(href=`/product/delete/${car.id}`) Delete

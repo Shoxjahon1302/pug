@@ -187,7 +187,7 @@ body.dark .switch::before {
 .dashboard {
   background: var(--panel-color);
   left: 250px;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   padding: 10px 14px;
   width: calc(100% - 250px);
