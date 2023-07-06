@@ -4,6 +4,9 @@ router.get("/", (req, res) => {
   res.render("admin/index", { title: "Dashboard" });
 });
 router.get("/product", (req, res) => {
-  res.render("admin/pages/product/index", { title: "Products" });
+  res.render("admin/pages/product/index", {
+    title: "Products",
+    activePage: "product",
+  });
 });
 module.exports = router;

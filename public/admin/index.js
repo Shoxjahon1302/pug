@@ -49,9 +49,8 @@ fetch("/data/data.json")
        <tr>
         <th>${item.id}</th>
         <th>${item.first_name}</th>
-        <th>${item.last_name}</th>
         <th>${item.email}</th>
-        <th>${item.tabaqasi}</th>
+        <th>${item.Shohjaxon}</th>
        </tr>`
       )
       .join("");

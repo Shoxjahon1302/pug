@@ -5,27 +5,27 @@ nav
         .logo_name Dashboard
     .menu-items
         ul.nav-links
-            li
+            li(class=(activePage === "dashboard" ?"activePage" : undefined))
                 a(href='/admin')
                     i.fa-solid.fa-house
                     span.link-name Asosiy
-            li  
+            li(class=(activePage === "products" ?"activePage" : undefined))
                 a(href='/admin/product')
                     i.fa-solid.fa-bolt
                     span.link-name Mahsulotlar
-            li
-                a(href='#')
-                    i.fa-solid.fa-chart-line
-                    span.link-name Diagrammamiz
-            li
-                a(href='#')
-                    i.fa-regular.fa-thumbs-up
-                    span.link-name Likes
-            li
-                a(href='#')
-                    i.fa-regular.fa-comments
-                    span.link-name Comments 
-            li
+            //- li
+            //-     a(href='#')
+            //-         i.fa-solid.fa-chart-line
+            //-         span.link-name Diagrammamiz
+            //- li
+            //-     a(href='#')
+            //-         i.fa-regular.fa-thumbs-up
+            //-         span.link-name Likes
+            //- li
+            //-     a(href='#')
+            //-         i.fa-regular.fa-comments
+            //-         span.link-name Comments 
+            //- li
                 a(href='#')
                     i.fa-solid.fa-share-from-square
                     span.link-name Sharie
