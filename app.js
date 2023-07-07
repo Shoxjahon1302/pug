@@ -38,6 +38,18 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
+// Global router
+app.get("*", (req, res, next) => {
+  if (req.user) {
+    const { password, ...user } = req.user._doc;
+    res.locals.user = JSON.stringify(user);
+    console.log(user);
+  } else {
+    res.locals.user = null;
+  }
+  next();
+});
+
 app.use((req, res, next) => {
   req.session.lang = req.query.lang || req.session.lang || "uz";
   const file = `./config/lang/${req.session.lang}.json`;

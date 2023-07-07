@@ -1,15 +1,15 @@
 nav
     .logo-name
         .logo-image
-            img(src='../images/logo.webp' alt='')
-        .logo_name Dashboard
+            img(src='../images/logo.png' alt='')
+        .logo_name arsFerm
     .menu-items
         ul.nav-links
-            li(class=(activePage === "dashboard" ?"activePage" : undefined))
+            li
                 a(href='/admin')
                     i.fa-solid.fa-house
                     span.link-name Asosiy
-            li(class=(activePage === "products" ?"activePage" : undefined))
+            li
                 a(href='/admin/product')
                     i.fa-solid.fa-bolt
                     span.link-name Mahsulotlar

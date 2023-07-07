@@ -8,19 +8,19 @@ block content
                 span.text Dashboard
             .boxes
                 .box.box1
-                    i.fa-regular.fa-thumbs-up(onclick='changeColor(this)')
+                    //- i.fa-regular.fa-thumbs-up(onclick='changeColor(this)')
+                    i.fa-regular.fa-thumbs-up 
                     span.text
-                        | Umumiy Layklarimiz 
+                        | Umumiy Mahsulotlarimiz 
                         br
-                        |                 Ko&apos;repsanmi cheksiz qivardek
                     span.number
-                        i.fa-solid.fa-infinity
+                        //- i #{productCount ? productCount : 0}
+                        i #{productCount || 0}
                 .box.box2
                     i.fa-regular.fa-comments
                     span.text
                         | Umumiy Comentariyalarimiz 
                         br
-                        |                 Bu ham wunde uka
                     span.number
                         i.fa-solid.fa-infinity
                 .box.box3
@@ -28,7 +28,6 @@ block content
                     span.text
                         | Umumiy Ulashilganlar 
                         br
-                        |                 G&apos;ilay ko&apos;zeni ochib ko&apos;r
                     span.number
                         i.fa-solid.fa-infinity
         .activity
