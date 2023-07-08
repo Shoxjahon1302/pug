@@ -138,6 +138,9 @@ nav.close .logo_name {
 .menu-items li a:hover .link-name {
   color: var(--primary-color);
 }
+.user {
+  
+}
 body.dark .menu-items li a:hover i,
 body.dark .menu-items li a:hover .link-name {
   color: var(--text-color);

@@ -2,7 +2,7 @@ extends layout
 
 block content
   p.product Welcome to #{title}
-  h1 user: #{user ? user.name: "mehmon"}
+  h1 user: #{user ? user.name : "mehmon"}
     div.links
       a(href=`/product/add`) Add 
       a(href=`/admin`) AdminPanel  
